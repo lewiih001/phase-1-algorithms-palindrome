@@ -1,7 +1,17 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
+function isPalindrome(str) {
+  var len = str.length;
+  var mid = Math.floor(len/2);
 
+  for ( var i = 0; i < mid; i++ ) {
+      if (str[i] !== str[len - 1 - i]) {
+          return false;
+      }
+  }
+
+  return true;
+
+}
+ 
 /* 
   Add your pseudocode here
 */
@@ -11,6 +21,8 @@ function isPalindrome(word) {
 */
 
 // You can run `node index.js` to view these console logs
+
+
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
